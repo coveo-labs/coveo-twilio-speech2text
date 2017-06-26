@@ -29,7 +29,7 @@
   $coveoQuery = 'https://s3.amazonaws.com/static.coveodemo.com/onlinehelp/index.html%23q='.$SpeechResult;
 
   // Shortens the Coveo Query using Bitly
-  $bitlyToken = "7d792930848535a92854ddb5011cb108d23e5847";
+  $bitlyToken = "YOUR_BITLY_KEY";
   // We use the external library/add-on Requests. It is declared in the composer.json
   $response = Requests::get('https://api-ssl.bitly.com/v3/shorten?access_token='.$bitlyToken.'&longUrl='.$coveoQuery);
   $responseBody = $response->body;
@@ -45,8 +45,8 @@
   use Twilio\Rest\Client;
 
   // Your Account SID and Auth Token from twilio.com/console
-  $sid = 'ACf245b9a4ba19376d3d9f54bee5e752ef';
-  $token = 'f8ea5e83fd4a101db3386b7744d54d60';
+  $sid = 'YOUR_TWILIO_SID';
+  $token = 'YOUR_TWILIO_TOKEN';
   $client = new Client($sid, $token);
 
   // Use the client to do send a text message
