@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twilio/sdk": ">=1.0",
+        "rmccue/requests": ">=1.0"
+    }
+}
